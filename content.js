@@ -1,7 +1,22 @@
 "use strict";
+
+function setContent(HtmlContent)
+{
+    var obj;
+    obj = document.getElementById("content");
+    obj.innerHTML = HtmlContent;    
+}
+
 function getAjoutArgent()
 {
-    setContent("Formulaire ajout argent");
+    var formulaire = "";
+    formulaire = getFormulaireAjoutArgent();
+    setContent(formulaire);
+}
+
+function getFormulaireAjoutArgent()
+{
+    return "Formulaire ajout Argent";
 }
 
 function getListeMatch()
@@ -15,9 +30,3 @@ function getResultatMatch()
     setContent("Résultat");
 }
 
-function setContent(HtmlContent)
-{
-    var obj;
-    obj = document.getElementById("content");
-    obj.innerHTML = HtmlContent;    
-}
